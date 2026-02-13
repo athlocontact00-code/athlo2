@@ -1,6 +1,0 @@
-1:"$Sreact.fragment"
-2:I[10375,["/_next/static/chunks/088e88191fde5527.js","/_next/static/chunks/516b22a10b6e3e2f.js","/_next/static/chunks/3e5abf0f92544143.js","/_next/static/chunks/464f03435267a0f5.js"],"RoleSwitcher"]
-3:I[36345,["/_next/static/chunks/33074d3ff5d0cd2d.js","/_next/static/chunks/c4d90098b4abc498.js"],"OutletBoundary"]
-4:"$Sreact.suspense"
-0:{"buildId":"tLobZbBZPBjSdkAonfytr","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-6","children":[["$","p",null,{"className":"text-body text-foreground-muted","children":"Account and app preferences."}],["$","div",null,{"className":"rounded-xl border border-border-soft bg-background-card text-foreground shadow-sm transition-all duration-200","children":[["$","div",null,{"className":"flex flex-col space-y-1.5 p-6","children":[["$","h3",null,{"className":"text-heading leading-none tracking-tight","children":"Role & mode"}],["$","p",null,{"className":"text-body-sm text-foreground-muted","children":"Switch between Coach and Athlete. For Athlete, choose Solo (Free/Pro) or With Coach / AI Coach."}]]}],["$","div",null,{"className":"p-6 pt-0","children":["$","$L2",null,{}]}]]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
-5:null
