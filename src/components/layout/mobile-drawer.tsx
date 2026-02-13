@@ -12,17 +12,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { NAV_ITEMS } from "@/config/nav";
+import { NAV_ITEMS, getVisibleNavItems } from "@/config/nav";
 import { useRole } from "@/contexts/role-context";
 
 export function MobileDrawer() {
   const pathname = usePathname();
-  const { isCoach } = useRole();
-
-  const items = NAV_ITEMS.filter((item) => {
-    if (item.coachOnly && !isCoach) return false;
-    return true;
-  });
+  const { canAccess } = useRole();
+  const items = getVisibleNavItems(NAV_ITEMS, canAccess);
 
   return (
     <Sheet>

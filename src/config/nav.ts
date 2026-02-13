@@ -32,3 +32,14 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/coach", label: "Coach", icon: Briefcase, coachOnly: true },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
+
+/** Gating: use with useRole().canAccess so Athletes/Coach tabs hidden for Athlete role. */
+export function getVisibleNavItems(
+  items: NavItem[],
+  canAccess: (feature: string) => boolean
+): NavItem[] {
+  return items.filter((item) => {
+    const feature = item.href.replace(/^\//, "") || "dashboard";
+    return canAccess(feature);
+  });
+}

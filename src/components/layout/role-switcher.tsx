@@ -21,6 +21,9 @@ export function RoleSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
+      <span className="rounded bg-primary-muted/50 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-foreground-muted">
+        Dev
+      </span>
       <div className="relative">
         <Button
           variant="outline"

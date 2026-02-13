@@ -3,17 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { NAV_ITEMS } from "@/config/nav";
+import { NAV_ITEMS, getVisibleNavItems } from "@/config/nav";
 import { useRole } from "@/contexts/role-context";
 
 export function Sidebar() {
   const pathname = usePathname();
-  const { isCoach } = useRole();
-
-  const items = NAV_ITEMS.filter((item) => {
-    if (item.coachOnly && !isCoach) return false;
-    return true;
-  });
+  const { canAccess } = useRole();
+  const items = getVisibleNavItems(NAV_ITEMS, canAccess);
 
   return (
     <aside className="hidden w-56 shrink-0 flex-col border-r border-border-soft bg-background-elevated md:flex">

@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyState } from "@/components/empty-state";
+import { LockedFeature } from "@/components/locked-feature";
 import { useRole } from "@/contexts/role-context";
 
 function TrainingContent() {
@@ -15,11 +16,11 @@ function TrainingContent() {
       </CardHeader>
       <CardContent>
         {isLocked ? (
-          <EmptyState
+          <LockedFeature
             title="Upgrade to access training plans"
             description="Go Pro or connect with a coach to get structured workouts."
             variant="upgrade"
-            action={{ label: "Upgrade to Pro" }}
+            ctaLabel="Upgrade to Pro"
           />
         ) : (
           <EmptyState

@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { LockedFeature } from "@/components/locked-feature";
 import { MOCK_ATHLETES } from "@/data/mock";
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -10,7 +11,16 @@ export default function AthletesPage() {
   const { isCoach } = useRole();
 
   if (!isCoach) {
-    return null;
+    return (
+      <div className="space-y-6">
+        <LockedFeature
+          title="Coach only"
+          description="Athlete list is for coaches. Switch to Coach role in Settings."
+          variant="locked"
+          ctaLabel="Go to Settings"
+        />
+      </div>
+    );
   }
 
   return (
